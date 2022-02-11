@@ -1,0 +1,248 @@
+<head>
+
+	<style>
+		html, body {
+		width:100%;
+		height:100%;
+		padding:0px;
+		margin:0px;
+		overflow: hidden;
+		font-family: sans-serif Raleway;
+	}
+	#projector {
+	  position: absolute;
+	  top: 0px;
+	  left: 0px;
+	  width:100%;
+	  height:100%;
+	}
+
+	.center-div {
+		width:580px;
+	    height:374px;
+	    position:absolute;
+	    left:50%;
+	    top:50%;
+	    margin-left: -290px;
+	    margin-top:  -187px;
+	}
+
+	#preloaderDiv
+	{
+		position:absolute;
+		left:50%;
+	    top:50%;
+	    margin-left: -27px;
+	    margin-top:  -27px;
+	}
+
+	#logo{
+		opacity:0;
+	    filter: alpha(opacity=0);
+	}
+
+	#date2014
+	{
+		position:absolute;
+		padding-left: 210px;
+		padding-top:15px;
+		opacity:0;
+		top:303px;
+		left:0;
+	    filter: alpha(opacity=0);
+	}
+		* {
+			color: white;
+			font-family: Raleway;
+		}
+		#flex {
+			width: 100%;
+			left: 0;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		button {
+			padding: 20px;
+			border-radius: 5px;
+			background: rgba(0, 0, 0, 0.2);
+			background-effect: blur(20px);
+			border: none;
+			cursor: pointer;
+			transition: 0.5s ease;
+			margin: 10px;
+		}
+		button:hover {
+			background: rgba(0, 0, 0, 0.4);
+			margin: 5px;
+			padding: 30px;
+			border-radius: 8px;
+			font-size: 13pt;
+			font-weight: 600;
+		}
+		.btnbox {
+			width: 90%;
+			left: 5%;
+			position: sticky;
+			display: block;
+			text-align: center;
+			top: 5%;
+			overflow-y: auto;
+		}
+		@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image:
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+		box-shadow: none;
+
+}
+.waveTop {
+    background-size: 50% 100px;
+		box-shadow:none;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+		box-shadow:none;
+
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+		box-shadow:none;
+
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+		box-shadow:none;
+
+}
+.bg {
+	z-index: -1000 !important;
+}
+.body {
+	z-index: 1000 !important;
+}
+.bgblur {
+	backdrop-filter: blur(10px);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	overflow: hidden;
+}
+#vanta-canvas {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: -1;
+}
+.all {
+	z-index: 1 !important;
+}
+	</style>
+	<link rel="icon" href="/bin/assets/favicon.png">
+</head>
+<body>
+	<div id="vanta-canvas"></div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.waves.min.js"></script>
+	<script type="text/javascript">
+		VANTA.WAVES({
+		  el: '#vanta-canvas',
+		  color: 0x0,
+		  waveHeight: 20,
+		  shininess: 40,
+		  waveSpeed: 0.5,
+		  zoom: 1
+		})
+	</script>
+	<div class=all>
+	<div id=flex>
+		<div class=body>
+		<h1 style="text-align: center;">Bored Games</h1>
+
+		<a style=text-align:center;width:100%;display:inline-block>Here to make school less boring</a>
+		<div class=btnbox>
+			<a href="bin/bc1pv2.html"><button>Ball Chaser (1 Player) Updated!</button></a>
+			<a href="bin/ballchaser2player.html"><button>Ball Chaser (2 Player, WIP)</button></a>
+			<a href="bin/ragesquare.html"><button>Rage Square (WIP)</button></a>
+			<a href="bin/papermc.html"><button>Paper Minecraft</button></a>
+			<a href="bin/bigplatformer.html"><button>Multiplayer Platformer</button></a>
+			<a href="bin/chat.html"><button>chat (testing)</button></a>
+			<a href="bin/diepio.html"><button>diep.io</button></a>
+			<a href="bin/slitherio.html"><button>slither.io</button></a>
+			<a href="bin/gettingoverit.html"><button>Getting Over It (scratch)</button></a>
+			<a href="bin/mariobros.html"><button>Super Mario Bros.</button></a>
+			<a href="bin/pong.html"><button>Original Pong</button></a>
+			<a href="bin/geometrydash.html"><button>Geometry Dash</button></a>
+			<a href="bin/paintv1.html"><button>Paint</button></a>
+			<a href="bin/fpp.html"><button>First Person Maze (raycasting test)</button></a>
+			<a href="bin/mazebeta.html"><button>First Person Maze (beta)</button></a>
+			<a href=""><button>(UPCOMING) Doom</button></a>
+			<a href=""><button>(UPCOMING) The Oregon Trail</button></a>
+			<br><br><i style=opacity:0.5;>More Coming Soon!</i>
+			<br><br><br><br><br><i style=opacity:0.5;>Upcoming: DOS games!</i>
+			</div>
+			</div>
+			</div>
+			</body>
