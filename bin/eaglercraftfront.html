@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style media="screen">
+			body {
+				background: black;
+				color: white;
+			}
+			.warning {
+				width: 80%;
+				height: 500px;
+				background: yellow;
+				position: fixed;
+				left: 10%;
+				top: calc(50% - 250px);
+				color: black;
+				padding: 10px;
+				box-sizing: border-box;
+			}
+			.warning button {
+				width: 100px;
+				font-size: 22px;
+				left: calc(50% - 50px);
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="warning">
+			<h1>WARNING</h1><br><br>
+			<h3>I did not create this program. Through my testing there is no malicious code, but if there is I take no responsibility to any damages done to your device. I also take no responsibility to any punishments you get for visiting this website (eg. getting in trouble at school, getting fired at work, etc). This website also breaks Mojang's TOS (Terms Of Service), which can be found <a href=https://www.minecraft.net/en-us/terms>here</a>. The program you are about to use is free, and if you paid someone for it then you got scammed. This program is called EaglerCraft and was developed by lax1dude on <a href=https://github.com/lax1dude/eaglercraft>GitHub</a>. This is an offline version I downloaded from the GitHub, and <i>should</i> work as expected. I take no responsibility if anything breaks, or if you lose a world. After you hit "OK," you are responsible for your own actions.<br><br><br><br><button onclick=eaglercraft()>OK</button>
+		</div>
+		<script type="text/javascript">
+			function eaglercraft() {
+				let verify = prompt('type "I AGREE" to agree to the message stated below.');
+				if (verify == "I AGREE") {
+					window.location.replace("eaglercraft.html");
+				} else {
+					alert("try again");
+				}
+			}
+		</script>
+	</body>
+</html>
